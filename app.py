@@ -31,7 +31,7 @@ def generate_text(model,Tokenizer,max_length,seed_text,n_words):
         text_generated +=' '+ predicted_word
     return text_generated
 tokenizer= Tokenizer()
-tokenizer=.fit_on_texts([data])
+tokenizer.fit_on_texts([data])
 max_length =14
 st.title("The Simpsons Chalkboards Gag Text Generator.")
 image =Image.open('./1.jpg')
