@@ -19,7 +19,7 @@ with open('./bart-chalkboard-data.txt','r',encoding='utf-8')as file:
     data=file.read()
 def generate_text(model,Tokenizer,max_length,seed_text,n_words):
     text_generated =seed_text
-    for i in range(n_words):
+    for i in range(int(n_words)):
         encoded=tokenizer.texts_to_sequences([text_generated])[0]
         encoded=pad_sequences([encoded],max_len=max_length,padding='pre')
         yhat=model.predict_classes(encoded,verbose=0)
